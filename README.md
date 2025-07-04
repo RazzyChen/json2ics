@@ -4,7 +4,7 @@
 此项目结构化的学习计划 JSON 数据转换为标准 iCalendar (.ics) 文件，轻松导入到iPhone，妈妈再也不用担心我需要手抄课表了。含有课表信息的JSON文件可以通过任何一个支持图片输出的大语言模型帮你，这种简单的任务几乎所有模型做的效果都很好。\
 本项目在macOS+iPhone的组合上测试通过，理论上来说Windows+iPhone的用户也可以达成一样的效果。\
 由于跨平台的ABI兼容问题，使得我不能用C/C++给出二进制文件。我当然可以给出源码但是也需要用户熟练掌握Windows平台的MSVC编译或者是VS的项目管理功能。\
-Python确实是个不错的实现方式，不过仍旧需要用户可以自行配置Python interpreter并且熟练使用pip或者uv run等功能。\
+Python确实是个不错的实现方式，不过仍旧需要用户可以自行配置Python interpreter并且熟练使用pip或者uv run等功能。
 
 ---
 
