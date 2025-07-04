@@ -1,7 +1,9 @@
 # 📅 JSON 学习计划转 ICS 日历工具
-
-将结构化的学习计划 JSON 数据转换为标准 iCalendar (.ics) 文件，轻松导入 macOS 日，妈妈再也不用担心我需要手抄课表了。
-
+有道没有在IOS平台上推出一键日历导入功能，每个月都要手抄一次课表！
+此项目结构化的学习计划 JSON 数据转换为标准 iCalendar (.ics) 文件，轻松导入到iPhone，妈妈再也不用担心我需要手抄课表了。
+含有课表信息的JSON文件可以通过任何一个支持图片输出的大语言模型帮你，这种简单的任务几乎所有模型做的效果都很好。
+本项目在macOS+iPhone的组合上测试通过，理论上来说Windows+iPhone的用户也可以达成一样的效果。
+由于跨平台的ABI兼容问题，使得我不能用C/C++给出二进制文件。我当然可以给出源码但是也需要用户熟练掌握Windows平台的MSVC编译或者是VS的项目管理功能。而Python确实是个不错的实现方式，不过仍旧需要用户可以自行配置Python interpreter并且熟练使用pip或者uv run等功能。
 ---
 
 ## 🌟 功能亮点
@@ -39,19 +41,23 @@ cd json-to-ics-converter
 ```bash
 pip install pytz
 ```
-
-### 3. 运行转换
+### 3. 如何获得含有课表信息的ics文件？
+你可以使用任何一个支持图片输入的多模态LLM帮你，包括但不限于Qwen3等。提示词如下所示：
+```text
+我这里有一张关于本月学习计划的课表，我希望你可以帮我提取出课表的学习日期，学习课程，学习时长。课表中会出现补课or复习的字样，它的学习课程，学习时长留空值，你还会遇到学习形式是录播的课程，它的学习时长是1h。我希望你可以json格式组织这些数据
+```
+### 4. 运行转换
 ```bash
 # 默认模式
-python convert_json_to_ics.py
+python json2ics.py
 
 # 自定义文件名
-python convert_json_to_ics.py --input my_plan.json --output my_plan.ics
+python json2ics.py --input my_plan.json --output my_plan.ics
 ```
 
 ---
 
-## 📝 输入格式示例 (`study_plan.json`)
+## 📝 输入格式示例 (`test.json`)
 
 ```json
 {
