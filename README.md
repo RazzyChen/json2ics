@@ -32,9 +32,9 @@
 ## 🚀 快速开始
 
 ### 1. 克隆项目
-```bash
-git clone https://github.com/yourname/json-to-ics-converter.git
-cd json-to-ics-converter
+```bash[
+git clone https://github.com/RazzyChen/json2ics.git
+cd json2ics
 ```
 
 ### 2. 安装依赖
@@ -54,6 +54,8 @@ python json2ics.py
 # 自定义文件名
 python json2ics.py --input my_plan.json --output my_plan.ics
 ```
+### 5. 导入课表到日历
+当你拿到ics文件之后即可在iPhone上导入课表到日历中
 
 ---
 
