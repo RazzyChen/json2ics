@@ -1,4 +1,3 @@
-```markdown
 # 📅 JSON 学习计划转 ICS 日历工具
 
 将结构化的学习计划 JSON 数据转换为标准 iCalendar (.ics) 文件，轻松导入 macOS 日，妈妈再也不用担心我需要手抄课表了。
@@ -112,6 +111,3 @@ UID:1A2B3C4D-5E6F-7A8B-9C0D-EF1234567890
 
 [MIT License](LICENSE)  
 允许商业使用与修改，详情见 LICENSE 文件
-```
-
----
